@@ -19,6 +19,7 @@ Note: You should only have 2 routes for this assignment -- '/' and
 '/process_money'
 
 Assignment check list
+
     - Create a new Flask project called ninja_gold
     - Create the template as shown in the wirefram above, with 4
         separate forms
