@@ -32,10 +32,10 @@ Assignment check list
     - NINJA BONUS: Have the activities be color-coded (+ money is green,
         - money is red)
     -NINJA BONUS: Add a reset button to restart the game
-    -SENSEI BONUS: HAve the activities display in decending ordeer, with
+    -SENSEI BONUS: Have the activities display in decending order, with
         the most recent activity first
     - SENSEI BONUS: Provide winning parameters to the game -- for example,
         a user must obtain 500 gold in less than 15 moves. Only display the
         reset button once the user has lost or won.
     -SENSEI BONUS: Complete the "/process_money" route without 4 conditional
-        statemeents (i.e. without doing if farm... elif cave... etc.)
+        statements (i.e. without doing if farm... elif cave... etc.)
