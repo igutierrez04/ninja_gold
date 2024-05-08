@@ -80,9 +80,18 @@
     </section>
 
     <!-- activity log -->
-    <section class="bg-secondary mt-5">
-        <div class="">
-            <h1>Acitivities:</h1>
+    <section id="activity">
+        <div class="bg-dark container-md mt-5 pt-2 border-dark border-2">
+            <h3 class="text-light">Activities:</h3>
+            <div class="text-start">
+                {% for i in session['activity'] %}
+                    {% if i[1] == "success" %}
+                        <p class="text-success">{{i[0]}}</p>
+                    {% else %}
+                        <p class="text-danger">{{i[0]}}</p>
+                    {% endif %}
+                {% endfor %}
+            </div>
         </div>
     </section>
 

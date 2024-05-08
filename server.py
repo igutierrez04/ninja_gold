@@ -16,7 +16,7 @@ def home():
         session['gold'] = 0
     if 'activity' not in session:
         session['activity'] = []
-    return render_template('index.html', max_gold = max_gold)
+    return render_template('index.html')
 
 @app.route('/process_money', methods=['POST'])
 def process_money():
