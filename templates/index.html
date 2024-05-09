@@ -15,12 +15,23 @@
     <section class="bg-light mt-5">
         <div class="container-lg">
             <div class="d-inline-flex w-75 justify-content-evenly">
-                <h2>Your Gold</h2>
-                <p class="lead border border-dark border-2 w-25 h-25 ps-2">{{session.gold}}</p>
+                <!-- winning parameters -->
+                {% if session.gold >= max_gold %}
+                    <h2>You Win!</h2>
+                    <a href="/reset" class="btn btn-outline-success btn-lg mt-3">Restart</a>
+                    <h3>Attempts Remaining: {{25 - session['count']}}</h3>
+                <!-- losing parameters -->
+                {% elif session['count'] == 25 and session['gold'] < 500 %}
+                    <h2>You lose! Try again...</h2>
+                    <a href="/reset" class="btn btn-outline-danger btn-lg mt-3">Restart</a>
+                {% else %}
+                    <h2>Your Gold</h2>
+                    <p class="lead border border-dark border-2 w-25 h-25 ps-2">{{session.gold}}</p>
+                {% endif %}
             </div>
 
             <!-- play cards -->
-            <div class="row my-5 align-center-justify-content-center g-3">
+            <div class="row my-5 align-center justify-content-center g-3">
                 <!-- farm card -->
                 <div class="col-8 co-lg-4 col-xl-3">
                     <div class="card border-dark border-2">
